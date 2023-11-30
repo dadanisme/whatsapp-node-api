@@ -10,11 +10,7 @@ const { Client, LocalAuth } = require("whatsapp-web.js");
 process.title = "whatsapp-node-api";
 global.client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: {
-    headless: true,
-    executablePath: "/usr/bin/chromium-browser",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  },
+  puppeteer: { headless: true },
 });
 
 global.authed = false;
